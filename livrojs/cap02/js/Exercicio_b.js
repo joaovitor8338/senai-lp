@@ -7,7 +7,8 @@ frm.addEventListener("submit", (e)=>{
     //Math.round()
     
     const time = Math.round(valor / 15) * tempo
-    resp1.innerText`valor a Pagar ${time}`
-e.preventDefault()
+    resp1.innerText = `valor a Pagar: ${time}`
+
+    e.preventDefault()
 })
 
