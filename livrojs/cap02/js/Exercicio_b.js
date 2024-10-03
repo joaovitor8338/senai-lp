@@ -6,9 +6,11 @@ frm.addEventListener("submit", (e)=>{
     const tempo = Number(frm.inTempo.value)
     //Math.round()
     
-    const time = Math.round(valor / 15) * tempo
-    resp1.innerText = `valor a Pagar: ${time}`
+    const time = Math.round(tempo / 15)
+    const valorTotal = time * valor
+    resp1.innerText = `valor a Pagar: ${valorTotal}`
 
     e.preventDefault()
 })
 
+//const blocosDe15Minutos = Math.ceil(tempoUso / 15); // Arredonda para cima
