@@ -8,9 +8,9 @@ frm.addEventListener("submit", (e)=>{
     
     const time = Math.round(tempo / 15)
     const valorTotal = time * valor
-    resp1.innerText = `valor a Pagar: ${valorTotal}`
+    resp1.innerText = `valor a Pagar: ${valorTotal.toFixed(2)}`
 
     e.preventDefault()
 })
 
-//const blocosDe15Minutos = Math.ceil(tempoUso / 15); // Arredonda para cima
+
