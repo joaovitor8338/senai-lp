@@ -6,8 +6,9 @@ frm.addEventListener("submit", (e) => {
     const prod = frm.inProduto.value
     const preco = Number(frm.inPreco.value)
 
-    const desc = (preco * 0.50) * 3
-    resp1.innerText = `${prod.toFixed(2)} - Promoção: Leve 3 por R$: ${desc.toFixed(2)}`
+    const desc = Math.floor(preco * 3) - (preco * 0.5)
+   resp1.innerText = `Promoção de:${prod}, Leve 3 por apenas: ${desc}`
+   resp2.innerText = ` o 3º produto sai por apenas: R$ ${(preco * 0.5).toFixed(2)}`
 
     e.preventDefault()
 
