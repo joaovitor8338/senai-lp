@@ -9,45 +9,53 @@
     <h1>Lista de Exemplos e Exercicios</h1>
     <ul>
         <script>
-            const arquivos = ["Arquivo 01","Arquivo 02"];
-
-"livrojs/cap01/exe1_1.html"
-"livrojs/cap01/exe1_2.html"
-"livrojs/cap01/exe1_3.html"
-"livrojs/cap01/exe1_4.html"
-"livrojs/cap01/exe1_5.html"
-"livrojs/cap01/exe1_6.html"
-"livrojs/cap01/exe1_7.html"
-"livrojs/cap01/exe1_8.html"
-"livrojs/cap01/resp1_a.html"
-"livrojs/cap01/resp1_b.html"
-"livrojs/cap01/resp1_c.html"
-"livrojs/cap01/resp1_d.html"
-"livrojs/cap01/resp_c.html"
-"livrojs/cap02/exe2_1.html"
-"livrojs/cap02/exe2_2.html"
-"livrojs/cap02/exemplo_2.3.html"
-"livrojs/cap02/Exemplo_2.4.html"
-"livrojs/cap02/exercicio_A.html"
-"livrojs/cap02/exercicio_B.html"
-"livrojs/cap02/Exercicio_C.html"
-"livrojs/cap04/ex4_4.html"
-"livrojs/cap04/ex4_5.html"
-"livrojs/cap04/ex4_6.html"
-"livrojs/cap04/exe4_1.html"
-"livrojs/cap04/exe4_2.html"
-"livrojs/cap04/exe4_3.html"
-"livrojs/cap04/exercicio_A.html"
-"livrojs/cap04/Exercicio_B.html"
-"livrojs/cap04/exercicio_C.html"
-"livrojs/cap04/Exercicio_D.html"
-
-            for(let i = 0; i < arquivos.length; i++){
-                document.write(`<li><a href="${arquivos[i]}">${arquivos[i]}</a></li>)
-            }
+            const arquivos = ["livrojs/cap01/exe1_1.html",
+                "livrojs/cap01/exe1_2.html",
+                "livrojs/cap01/exe1_3.html",
+                "livrojs/cap01/exe1_4.html",
+                "livrojs/cap01/exe1_5.html",
+                "livrojs/cap01/exe1_6.html",
+                "livrojs/cap01/exe1_7.html",
+                "livrojs/cap01/exe1_8.html",
+                "livrojs/cap01/resp1_a.html",
+                "livrojs/cap01/resp1_b.html",
+                "livrojs/cap01/resp1_c.html",
+                "livrojs/cap01/resp1_d.html",
+                "livrojs/cap01/resp_c.html",
+                "livrojs/cap02/exe2_1.html",
+                "livrojs/cap02/exe2_2.html",
+                "livrojs/cap02/exe2_3.html",
+                "livrojs/cap02/exe2_4.html",
+                "livrojs/cap02/resp_A.html",
+                "livrojs/cap02/resp_B.html",
+                "livrojs/cap02/resp_C.html",
+                "livrojs/cap04/exe4_4.html",
+                "livrojs/cap04/exe4_5.html",
+                "livrojs/cap04/exe4_6.html",
+                "livrojs/cap04/exe4_1.html",
+                "livrojs/cap04/exe4_2.html",
+                "livrojs/cap04/exe4_3.html", 
+                "livrojs/cap04/resp_A.html",
+                "livrojs/cap04/resp_B.html",
+                "livrojs/cap04/resp_C.html",
+                "livrojs/cap04/resp_D.html"];
+            let cap = ""
+            for(let i = 0; i < arquivos.length; i++) {
+                let url = arquivos[i].split("/")
+                if(cap != url[1]){
+                    cap = url[1]
+                    document.write(`<h3>${cap.replace("cap","capitulo ")}</h3>`)
+                }
+                let link =  arquivos[i].substring(14)
+                .replace(".html","")
+                .replace("exe","Exemplo ")
+                .replace("resp","Resposta ")
+                .replace("_",".")
+                
+                document.write(`<li><a href="${arquivos[i]}">${[link]}</a></li>`)
+                }
         </script>
-        <li><a href="livrojs/cap01/exe1_1.html">Exemplo 1.1</a></li>
+       
       </ul>
       </html>
 
-livrojs\cap01\exe1_1.html
